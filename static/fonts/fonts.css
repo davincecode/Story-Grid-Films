@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Lora";
+  src: url("Lora-Regular.ttf");
+}
+@font-face {
+  font-family: "Lora-Bold";
+  src: url("Lora-Bold.ttf");
+}
+@font-face {
+  font-family: "Lora-Italic";
+  src: url("Lora-Italic.ttf");
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato-Light";
+  src: url("Lato-Light.ttf");
+}
+@font-face {
+  font-family: "Lato-Thin";
+  src: url("Lato-Thin.ttf");
+}
+
+@font-face {
+  font-family: "FontsFree-Net-RareBirdSpecimenII";
+  src: url("FontsFree-Net-RareBirdSpecimenII.ttf");
+}
