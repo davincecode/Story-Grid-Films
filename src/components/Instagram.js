@@ -27,8 +27,7 @@ const Instagram = () => {
   return (
     <InstagramBox>
       <ColumnOne>
-        <h3>Follow us on Instagram</h3>
-        <p>Please hit subscribe like and comment</p>
+        <p>Follow us on Instagram</p>
       </ColumnOne>
       <ColumnTwo>
         <InstaStyle>
@@ -52,7 +51,7 @@ const InstagramBox = styled.div`
   width: 100%;
   overflow: hidden;
   position: relative;
-  padding: 2rem;
+  background: #f9f6f2;
 
   @media screen and (max-width: 280px) {
     padding: 0 1rem;
@@ -66,8 +65,12 @@ const InstaStyle = styled.div`
 `
 
 const ColumnOne = styled.div`
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  font-size: clamp(0.8rem, 1.8vw, 1.5rem);
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: #545454;
 `
 
 const ColumnTwo = styled.div`

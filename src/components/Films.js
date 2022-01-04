@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { Button } from "./Button"
 
 const Films = ({ heading }) => {
   const data = useStaticQuery(graphql`
@@ -35,9 +34,7 @@ const Films = ({ heading }) => {
             alt={item.node.alt}
             fluid={item.node.img.childImageSharp.fluid}
           />
-          <FeatureInfo>
-            <Button to="/films">{item.node.button}</Button>
-          </FeatureInfo>
+          <FeatureInfo></FeatureInfo>
         </FeatureCard>
       )
     })
@@ -101,13 +98,4 @@ const FeatureImg = styled(Img)`
   }
 `
 
-const FeatureInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0 2rem;
-
-  @media screen and (max-width: 280px) {
-    padding: 0 1rem;
-  }
-`
+const FeatureInfo = styled.div``

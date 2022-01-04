@@ -5,7 +5,7 @@ import Seo from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="About" />
+    <Seo title="About | Edmonton Wedding Videographer" />
     <Hero />
     <h1>About me</h1>
     <p>Welcome to your new Gatsby site.</p>
