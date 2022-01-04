@@ -3,7 +3,7 @@ import Hero from "../components/Hero"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const IndexPage = () => (
+const about = () => (
   <Layout>
     <Seo title="About | Edmonton Wedding Videographer" />
     <Hero />
@@ -12,4 +12,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default about
