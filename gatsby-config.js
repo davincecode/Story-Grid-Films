@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/Story-Grid-Films",
   siteMetadata: {
     title: `Edmonton Wedding Videographer`,
     description: `Wedding Videographer in Edmonton.`,
