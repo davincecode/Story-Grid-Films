@@ -1,14 +1,12 @@
 import React from "react"
-import Hero from "../components/Hero"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const about = () => (
   <Layout>
     <Seo title="About | Edmonton Wedding Videographer" />
-    <Hero />
-    <h1>About me</h1>
-    <p>Welcome to your new Gatsby site.</p>
+    <h1>under construction</h1>
+    <p>Please come back some other time.</p>
   </Layout>
 )
 
