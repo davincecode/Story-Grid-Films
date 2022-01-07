@@ -3,7 +3,7 @@ import Films from "../components/Films"
 import Hero from "../components/Hero"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Stats from "../components/Stats"
+import Experience from "../components/Experience"
 import Email from "../components/Email"
 import AboutColumn from "../components/AboutColumn"
 
@@ -13,7 +13,7 @@ const IndexPage = () => (
     <Hero />
     <AboutColumn heading="EDMONTON WEDDING VIDEOGRAPHER, ALSO AVAILABLE FOR DESTINATION WEDDINGS" />
     <Films heading="FEATURED WEDDINGS" />
-    <Stats />
+    <Experience />
     <Email />
   </Layout>
 )

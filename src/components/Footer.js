@@ -32,17 +32,17 @@ const Footer = () => {
         <FooterLinksWrapper>
           <FooterLinksItems>
             <FooterLinkTitle>SOCIAL</FooterLinkTitle>
-            <FooterLink to="/portfolio">Portfolio</FooterLink>
-            <FooterLink to="/about">About</FooterLink>
-            <FooterLink to="/investment">Investment</FooterLink>
-            <FooterLink to="/contact">Contact</FooterLink>
+            <FooterLink to="/portfolio">Facebook</FooterLink>
+            <FooterLink to="/about">Instagram</FooterLink>
+            <FooterLink to="/investment">Pinterest</FooterLink>
+            <FooterLink to="/contact">Github</FooterLink>
           </FooterLinksItems>
           <FooterLinksItems>
             <FooterLinkTitle>RESOURCES</FooterLinkTitle>
             <FooterLink to="/portfolio">Inspirations</FooterLink>
-            <FooterLink to="/about">Guides</FooterLink>
-            <FooterLink to="/investment">Self-care</FooterLink>
-            <FooterLink to="/contact">Vendor Friends</FooterLink>
+            <FooterLink to="/about">Wedding Guide</FooterLink>
+            <FooterLink to="/investment">Vendor friends</FooterLink>
+            <FooterLink to="/contact">Web Developer</FooterLink>
           </FooterLinksItems>
         </FooterLinksWrapper>
       </FooterContainer>
@@ -54,9 +54,15 @@ const Footer = () => {
 export default Footer
 
 const Main = styled.div`
+  margin-left: 30%;
+  transform: translateX(-20%);
+  overflow: hidden;
   background: #f9f6f2;
-  padding: 2rem calc((100vw - 1100px) / 2);
-  padding-bottom: 2rem;
+
+  @media screen and (max-width: 500px) {
+    margin-left: 15%;
+    transform: translateX(-10%);
+  }
 `
 
 const FooterContainer = styled.div`
@@ -84,26 +90,8 @@ const FooterDesc = styled.div`
 
   p {
     font-size: 0.7rem;
-    floart: right;
+    float: right;
     margin-top: 0.5rem;
-  }
-
-  @media screen and (max-width: 768px) {
-    padding: 0.5rem;
-    display: block;
-
-    .App-logo {
-      height: 5vmin;
-      float: right;
-    }
-
-    h3 {
-      float: right;
-    }
-
-    p {
-      font-size: 0.6rem;
-    }
   }
 `
 

@@ -27,13 +27,16 @@ const Instagram = () => {
   return (
     <InstagramBox>
       <ColumnOne>
-        <p>Follow us on Instagram</p>
+        <h3>Follow us on Instagram</h3>
       </ColumnOne>
       <ColumnTwo>
         <InstaStyle>
           {arrayOfInstaImages.map((item, i) => {
             return (
-              <div key={i} style={{ width: "200px", height: "200px" }}>
+              <div
+                key={i}
+                style={{ width: "200px", height: "200px", margin: "5px" }}
+              >
                 <Img fixed={item.node.localImage.childImageSharp.fixed} />
               </div>
             )
@@ -47,14 +50,14 @@ const Instagram = () => {
 export default Instagram
 
 const InstagramBox = styled.div`
-  height: 100%;
-  width: 100%;
+  margin-left: 30%;
+  transform: translateX(-20%);
   overflow: hidden;
-  position: relative;
   background: #f9f6f2;
 
-  @media screen and (max-width: 280px) {
-    padding: 0 1rem;
+  @media screen and (max-width: 500px) {
+    margin-left: 15%;
+    transform: translateX(-10%);
   }
 `
 
@@ -71,6 +74,12 @@ const ColumnOne = styled.div`
   margin-top: 3rem;
   margin-bottom: 1rem;
   color: #545454;
+
+  @media screen and (max-width: 500px) {
+    h3 {
+      font-size: 16px;
+    }
+  }
 `
 
 const ColumnTwo = styled.div`
@@ -79,6 +88,7 @@ const ColumnTwo = styled.div`
   align-items: flex-end;
   width: 200px;
   flex-direction: column;
+  gap: 10%;
 
   @media screen and (max-width: 500px) {
   }
