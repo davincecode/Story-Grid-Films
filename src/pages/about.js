@@ -1,13 +1,14 @@
 import React from "react"
+import AboutColumn from "../components/AboutColumn"
+import "../components/styles/global.css"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Navdark from "../components/Navdark"
 
-const about = () => (
-  <Layout>
-    <Seo title="About | Edmonton Wedding Videographer" />
-    <h1>under construction</h1>
-    <p>Please come back some other time.</p>
-  </Layout>
-)
-
-export default about
+export default function about() {
+  return (
+    <Layout>
+      <Navdark />
+      <AboutColumn heading="EDMONTON WEDDING VIDEOGRAPHER, ALSO AVAILABLE FOR DESTINATION WEDDINGS" />
+    </Layout>
+  )
+}

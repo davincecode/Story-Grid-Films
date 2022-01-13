@@ -60,87 +60,96 @@ export default AboutColumn
 const AboutColumnContainer = styled.div`
   background: #f9f6f2;
   color: #000;
-  padding: 5rem calc((100vw - 1300px) / 2);
+  padding: 2rem calc((100vw - 1300px) / 2);
 `
 
 const AboutHeading = styled.div`
   font-size: clamp(1.2rem, 1.8vw, 3rem);
   text-align: center;
-  margin-bottom: 5rem;
   letter-spacing: 2px;
+  padding: 2rem;
   color: #545454;
 `
 
 const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 0 2rem;
 
   @media screen and (max-width: 768px) {
+    display: grid;
     grid-template-columns: 1fr;
   }
 `
 
-const AboutMe = styled.div`
+const RightColumn = styled.div`
+  display: flex;
   align-items: center;
-  width: 70%;
+  margin-right: 2rem;
+`
 
+const AboutMe = styled.div`
   h3 {
     font-family: "FontsFree-Net-RareBirdSpecimenII";
     font-size: clamp(3rem, 1.8vw, 3rem);
     font-weight: 100;
     color: #545454;
+    margin-bottom: 2rem;
   }
 
   p {
     color: #545454;
     text-align: justify;
-    line-height: 1.8rem;
+    line-height: 2rem;
   }
 
   @media screen and (max-width: 768px) {
-    display: block;
-    width: 100%;
+    padding: 2rem;
+    margin-left: 4rem;
+
+    h3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding-right: 4rem;
+
+    h3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
   }
 `
 
 const LeftColumn = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  padding: 4rem;
 
-  @media screen and (max-width: 500px) {
-    display: flex;
-    align-self: center;
-    justify-content: center;
+  @media screen and (max-width: 375px) {
+    display: none;
   }
-`
 
-const RightColumn = styled.div`
-  display: block;
-  margin-top: 1rem;
-
-  @media screen and (max-width: 500px) {
-    display: flex;
-    margin-top: 3rem;
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 `
 
 const Images = styled(Img)`
-  margin-right: 20px;
-  float: right;
-  width: 60%;
-
-  @media only screen and (max-width: 700px) {
-    width: 79.99999%;
-    float: left;
-    display: block;
-    padding: 0.1rem calc((100vw - 500px) / 2);
-  }
-
-  @media only screen and (max-width: 500px) {
-    width: 69.99999%;
-    display: block;
-    float: left;
-    padding: 0.1rem calc((100vw - 500px) / 2);
-  }
+  width: 100%;
 `

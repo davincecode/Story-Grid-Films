@@ -44,6 +44,10 @@ const Container = styled.div`
     margin-left: 15%;
     transform: translateX(-10%);
   }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
 `
 
 const FooterContainer = styled.div`

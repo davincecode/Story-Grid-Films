@@ -57,19 +57,13 @@ export default Instagram
 
 const Container = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
   overflow: hidden;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  height: 34vh;
-  width: 100vw;
 `
 
 const ColumnOne = styled.div`
   display: flex;
-  flex: 1;
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -85,19 +79,33 @@ const ColumnOne = styled.div`
 
 const ColumnTwo = styled.div`
   display: flex;
-  flex: 1;
   flex-wrap: wrap;
+  justify-content: center;
   overflow: hidden;
   height: 34vh;
-  width: 30vw;
+  width: 100vw;
   gap: 1px;
+  padding: 2rem;
 
   @media screen and (max-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-
-    height: 10vh;
-    width: 54vw;
+    justify-content: center;
+    overflow: hidden;
+    height: 44vh;
+    width: 100vw;
     gap: 1px;
+    padding: 2rem;
+  }
+
+  @media screen and (max-width: 1456px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    height: 33vh;
+    width: 100vw;
+    gap: 1px;
+    padding: 2rem;
   }
 `
