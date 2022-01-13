@@ -58,11 +58,9 @@ const AboutColumn = ({ heading }) => {
 export default AboutColumn
 
 const AboutColumnContainer = styled.div`
-  width: 100%;
   background: #f9f6f2;
   color: #000;
   padding: 5rem calc((100vw - 1300px) / 2);
-  height: 100%;
 `
 
 const AboutHeading = styled.div`
@@ -107,10 +105,14 @@ const AboutMe = styled.div`
 `
 
 const LeftColumn = styled.div`
-  display: block;
+  display: flex;
+  justify-content: flex-end;
 
   @media screen and (max-width: 500px) {
-    display: block;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+  }
 `
 
 const RightColumn = styled.div`

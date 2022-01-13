@@ -43,9 +43,7 @@ const Navlink = styled(Link)`
   cursor: pointer;
 
   &:hover {
-    color: #fff;
-    background: #000;
-    max-height: 1px;
+    color: #545454;
     transition: 0.5s ease-out;
   }
 `

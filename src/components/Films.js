@@ -54,7 +54,6 @@ export default Films
 const FeatureContainer = styled.div`
   padding: 1rem calc((100vw - 1300px) / 2);
   background: #f9f6f2;
-  }
 `
 const FeatureHeading = styled.div`
   font-family: Lora;

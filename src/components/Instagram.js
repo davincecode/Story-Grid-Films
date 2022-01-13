@@ -3,6 +3,7 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import _get from "lodash/get"
+import { Link } from "gatsby"
 
 const Instagram = () => {
   const data = useStaticQuery(graphql`
@@ -25,57 +26,57 @@ const Instagram = () => {
   let arrayOfInstaImages = _get(data, "allInstagramContent.edges")
 
   return (
-    <InstagramBox>
+    <Container>
       <ColumnOne>
         <h3>Follow us on Instagram</h3>
+        <Link
+          to="https://instagram.com/vincentybanezphoto"
+          className="no-style"
+        >
+          @vincentybanezphoto
+        </Link>
       </ColumnOne>
+
       <ColumnTwo>
-        <InstaStyle>
-          {arrayOfInstaImages.map((item, i) => {
-            return (
-              <div
-                key={i}
-                style={{ width: "200px", height: "200px", margin: "5px" }}
-              >
-                <Img fixed={item.node.localImage.childImageSharp.fixed} />
-              </div>
-            )
-          })}
-        </InstaStyle>
+        {arrayOfInstaImages.map((item, i) => {
+          return (
+            <div
+              key={i}
+              style={{ width: "200px", height: "200px", margin: "5px" }}
+            >
+              <Img fixed={item.node.localImage.childImageSharp.fixed} />
+            </div>
+          )
+        })}
       </ColumnTwo>
-    </InstagramBox>
+    </Container>
   )
 }
 
 export default Instagram
 
-const InstagramBox = styled.div`
-  margin-left: 30%;
-  transform: translateX(-20%);
-  overflow: hidden;
-  background: #f9f6f2;
-
-  @media screen and (max-width: 500px) {
-    margin-left: 15%;
-    transform: translateX(-10%);
-  }
-`
-
-const InstaStyle = styled.div`
-  position: relative;
-  max-width: 100%;
+const Container = styled.div`
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 34vh;
+  width: 100vw;
 `
 
 const ColumnOne = styled.div`
-  font-size: clamp(0.8rem, 1.8vw, 1.5rem);
   display: flex;
+  flex: 1;
   justify-content: center;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
+  flex-direction: column;
+  align-items: center;
   color: #545454;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 768px) {
+    padding: 5rem;
     h3 {
       font-size: 16px;
     }
@@ -84,12 +85,19 @@ const ColumnOne = styled.div`
 
 const ColumnTwo = styled.div`
   display: flex;
-  margin-top: 2rem;
-  align-items: flex-end;
-  width: 200px;
-  flex-direction: column;
-  gap: 10%;
+  flex: 1;
+  flex-wrap: wrap;
+  overflow: hidden;
+  height: 34vh;
+  width: 30vw;
+  gap: 1px;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+
+    height: 10vh;
+    width: 54vw;
+    gap: 1px;
   }
 `

@@ -87,7 +87,7 @@ const HeroItems = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  tex-alighn: center;
+  text-align: center;
   height: 100vh;
   max-height: 100%;
   padding: 0;

@@ -16,4 +16,9 @@ html{
 .infoHero{
   width: 300px;
 }
+
+.no-style{
+  text-decoration: none;
+  color: #545454;
+}
 `
