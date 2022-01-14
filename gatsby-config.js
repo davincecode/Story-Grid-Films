@@ -10,6 +10,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-robots-txt`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -62,6 +63,14 @@ module.exports = {
       options: {
         access_token:
           "IGQVJYU0lRYjdlWEJBeE81dldGM0hjX3ZAHcWUxSmtLSnI3NjNRRHYyQV9GQzJZAQVBVM3JoTDRPclY0eVVHN2ZAYVXdUMFRWNE02bjFiOHpiLXpPWUxXTGMwYkZA6VFdRblNlRHlpeWZAQUDlWanhCTzRuUQZDZD",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.storygridfilms.com",
+        sitemap: "https://www.storygridfilms.com/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
   ],

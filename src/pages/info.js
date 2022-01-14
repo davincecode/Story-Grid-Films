@@ -16,11 +16,8 @@ const info = () => (
       <InvestmentContainer>
         <p>
           My storytelling begins with getting ready, and ends whenever you are
-          ready to let me go.
-          <p>
-            I have found that 10 hours of coverage is more than enough for most
-            couples, but I am always happy to stay longer.
-          </p>
+          ready to let me go. I have found that 10 hours of coverage is more
+          than enough for most couples, but I am always happy to stay longer.
         </p>
       </InvestmentContainer>
       <Link to="/contact">
