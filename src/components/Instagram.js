@@ -82,29 +82,34 @@ const ColumnTwo = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   overflow: hidden;
-  height: 34vh;
-  width: 100vw;
+  height: 450px;
+  width: 100%;
+  object-fit: cover;
   gap: 1px;
   padding: 2rem;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 1601px) and (max-width: 6175px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-self: center;
     overflow: hidden;
-    height: 44vh;
-    width: 100vw;
+    height: 450px;
+    width: 60%;
+    object-fit: cover;
     gap: 1px;
     padding: 2rem;
   }
 
-  @media screen and (max-width: 1456px) {
+  @media screen and (min-width: 768px) and (max-width: 1600px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-self: center;
     overflow: hidden;
-    height: 33vh;
-    width: 100vw;
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
     gap: 1px;
     padding: 2rem;
   }

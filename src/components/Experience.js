@@ -84,7 +84,11 @@ const FooterLinkTitle = styled.div`
 
   color: #545454;
 
-  @media screen and (max-width: 400px) {
-    padding: 1rem;
+  @media screen and (min-width: 375px) and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
   }
 `

@@ -12,7 +12,9 @@ const info = () => (
     <Seo title="info | Edmonton Wedding Videographer" />
     <Navdark />
     <Container>
-      <h1>Your wedding, just like your love story, is truly one-of-a-kind.</h1>
+      <HeadingTitle>
+        Your wedding, just like your love story, is truly one-of-a-kind.
+      </HeadingTitle>
       <InvestmentContainer>
         <p>
           My storytelling begins with getting ready, and ends whenever you are
@@ -34,24 +36,41 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   color: #545454;
-
-  h1 {
-    font-family: "FontsFree-Net-RareBirdSpecimenII";
-    font-size: clamp(3rem, 1.8vw, 3rem);
-    font-weight: 100;
-    margin-bottom: 2rem;
-    padding: 5rem;
-  }
 `
 
 const InvestmentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 5rem;
+  padding: 2rem;
+  margin-bottom: 1rem;
 
   p {
-    width: 80vw;
+    font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+    letter-spacing: 2px;
+  }
+`
+
+const HeadingTitle = styled.div`
+  font-size: clamp(2.5rem, 1.8vw, 3rem);
+  font-weight: 100;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  padding: 2rem;
+
+  @media screen and (min-width: 375px) and (max-width: 768px) {
     display: flex;
-    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+    h1 {
+      font-family: "FontsFree-Net-RareBirdSpecimenII";
+      font-size: clamp(3rem, 1.8vw, 3rem);
+      font-weight: 100;
+      margin-bottom: 2rem;
+      justify-content: center;
+      align-items: center;
+    }
   }
 `

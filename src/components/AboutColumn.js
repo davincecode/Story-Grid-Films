@@ -35,20 +35,18 @@ const AboutColumn = ({ heading }) => {
           ))}
         </LeftColumn>
         <RightColumn>
-          <AboutMe>
-            <h3>Thanks for being here!</h3>
-            <p>
-              I'm Vince, a Fine-Art Wedding Photographer and Videographer based
-              in Edmonton, Alberta. Also available worldwide where my camera
-              might take me. I've been documenting weddings since 2013 and have
-              been fortunate enough to be part of the beautiful weddings in
-              Edmonton, as well as destination weddings. I hope you take some
-              time and learn more about how I can be part of your wedding day.
-              My work has been seen in wedding publications; such as Wedding
-              Sparrow, Dear Bride, The Knot, Wedding Wire, and much more. Please
-              take a look around the website, and I hope we connect soon!
-            </p>
-          </AboutMe>
+          <h3>Thanks for being here!</h3>
+          <p>
+            I'm Vince, a Fine-Art Wedding Photographer and Videographer based in
+            Edmonton, Alberta. Also available worldwide where my camera might
+            take me. I've been documenting weddings since 2013 and have been
+            fortunate enough to be part of the beautiful weddings in Edmonton,
+            as well as destination weddings. I hope you take some time and learn
+            more about how I can be part of your wedding day. My work has been
+            seen in wedding publications; such as Wedding Sparrow, Dear Bride,
+            The Knot, Wedding Wire, and much more. Please take a look around the
+            website, and I hope we connect soon!
+          </p>
         </RightColumn>
       </ContentWrapper>
     </AboutColumnContainer>
@@ -83,55 +81,43 @@ const ContentWrapper = styled.div`
 
 const RightColumn = styled.div`
   display: flex;
-  align-items: center;
-  margin-right: 2rem;
-`
+  flex-direction: column;
+  justify-content: center;
 
-const AboutMe = styled.div`
   h3 {
     font-family: "FontsFree-Net-RareBirdSpecimenII";
     font-size: clamp(3rem, 1.8vw, 3rem);
     font-weight: 100;
     color: #545454;
     margin-bottom: 2rem;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
   }
 
   p {
     color: #545454;
     text-align: justify;
     line-height: 2rem;
-  }
-
-  @media screen and (max-width: 768px) {
     padding: 2rem;
-    margin-left: 4rem;
-
-    h3 {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    p {
-      margin: 0;
-      padding: 0;
-    }
   }
 
-  @media screen and (max-width: 1024px) {
-    padding-right: 4rem;
-
+  @media screen and (min-width: 375px) and (max-width: 768px) {
     h3 {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      font-family: "FontsFree-Net-RareBirdSpecimenII";
+      font-size: clamp(3rem, 1.8vw, 3rem);
+      font-weight: 100;
+      color: #545454;
+      margin-bottom: 2rem;
       align-items: center;
+      justify-content: center;
+      align-self: center;
     }
 
     p {
-      margin: 0;
-      padding: 0;
+      color: #545454;
+      text-align: justify;
+      line-height: 2rem;
     }
   }
 `
@@ -139,7 +125,7 @@ const AboutMe = styled.div`
 const LeftColumn = styled.div`
   display: flex;
   justify-content: center;
-  padding: 4rem;
+  padding: 2rem;
 
   @media screen and (max-width: 375px) {
     display: none;
@@ -151,5 +137,9 @@ const LeftColumn = styled.div`
 `
 
 const Images = styled(Img)`
+  display: flex;
+  justify-content: center;
+  height: 100%;
   width: 100%;
+  object-fit: cover;
 `

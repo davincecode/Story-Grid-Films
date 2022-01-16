@@ -34,7 +34,6 @@ const Films = ({ heading }) => {
             alt={item.node.alt}
             fluid={item.node.img.childImageSharp.fluid}
           />
-          <FeatureInfo></FeatureInfo>
         </FeatureCard>
       )
     })
@@ -66,35 +65,50 @@ const FeatureHeading = styled.div`
 const FeatureWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+  grid-gap: 5px;
   justify-items: center;
   padding: 2rem;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 375px) and (max-width: 768px) {
     grid-template-columns: 1fr;
-    padding: 5rem;
-    min-height: 100vw;
+    display: grid;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    gap: 10px;
+    padding: 2rem;
   }
 `
 
 const FeatureCard = styled.div`
-  line-height: 2;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height: 100%;
   width: 100%;
-  height: 400px;
-  position: relative;
-  transition: 0.2s ease;
+  object-fit: cover;
+  gap: 10px;
 `
 
 const FeatureImg = styled(Img)`
-  height: 100%;
-  max-width: 100%;
-  position: relative;
-  filter: brightness(100%);
-  transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  height: auto;
+  width: 100%;
+  object-fit: cover;
 
-  &:hover {
-    filter: brightness(80%);
+  @media screen and (min-width: 769px) and (max-width: 6175px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    gap: 1px;
+    padding: 2rem;
   }
 `
-
-const FeatureInfo = styled.div``

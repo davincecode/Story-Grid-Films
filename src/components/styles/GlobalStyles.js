@@ -20,33 +20,29 @@ html{
 .no-style{
   text-decoration: none;
   color: #545454;
-}
-
-.youtube-embed{
-  margin-top:5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  h2{
-    padding:1rem;
-  }
-
-  p{
-    width: 50vw;
-    display: flex;
-    text-align: justify;
-    
-  }
-
-
-}
+}  
 
 .contactForm{
   height: 745px;
   min-width: 100%;
   max-width: 830px;
   border: 0;
+}
+
+.videoPlayer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  @media screen and (max-width: 375) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 }
 
 
