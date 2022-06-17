@@ -2,10 +2,9 @@ import styled from "styled-components"
 
 const StyledButton = styled.button`
   background-color: #212226;
-  border-radius: 40px;
   color: #f9f6f2;
   font-size: 16px;
-  padding: 1.4rem 5.5rem;
+  padding: 1.2rem 4rem;
 
   transition: background-color 0.4s;
   margin-bottom: 5rem;
