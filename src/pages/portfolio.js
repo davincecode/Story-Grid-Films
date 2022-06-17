@@ -69,7 +69,7 @@ const VideoContainer = styled.div`
   p {
     width: 100%;
     display: flex;
-    text-align: justify;
+    text-align: center;
     line-height: 1.5rem;
   }
 
@@ -78,6 +78,7 @@ const VideoContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding:2rem;
 
     h2 {
       font-family: Lora;
@@ -91,8 +92,7 @@ const VideoContainer = styled.div`
     p {
       width: 100%;
       display: flex;
-      text-align: justify;
-      margin-bottom: 4rem;
+      text-align: center;
     }
   }
 `

@@ -5,7 +5,6 @@ import Navdark from "../components/Navdark"
 import StyledButton from "../components/Button"
 import { Link } from "gatsby"
 import ReactPlayer from 'react-player'
-import { recent } from "../data/recent"
 
 import styled from "styled-components"
 
@@ -26,15 +25,20 @@ const info = () => (
                 background: false,
                 autoplay: true,
                 controls: false,
+                loop: true,
               }
             }
           } }
               controls={ false }
-              />
+        />
         <p>
-          My storytelling begins with getting ready, and ends whenever you are
-          ready to let me go. I have found that 10 hours of coverage is more
-          than enough for most couples, but I am always happy to stay longer.
+        Our style can best be described as “cinematic storytelling”. We produce films that you want to watch over and over again, not films that you only watch once. We don't just capture you wedding day as it happens and put it to music, but we really get to know who you are as a couple, what makes you unique and tell your story in your film.
+        </p>
+        <p>
+        Our storytelling begins with getting ready, and ends whenever you are ready to let me go. I have found that 10 hours of coverage is more than enough for most couples, but I am always happy to stay longer.
+        </p>
+        <p>
+        We are care-free, laid back, fun, and love coffee! We understand that the wedding planning process is stressful and frustrating at times, so the being laid back and easygoing helps put our couples at ease. This should be a fun process, not a stressful one!
         </p>
       </InvestmentContainer>
       <Link to="/contact">
@@ -65,6 +69,7 @@ const InvestmentContainer = styled.div`
   p {
     font-size: 1rem;
     letter-spacing: 2px;
+    padding: 2rem 0;
   }
 `
 

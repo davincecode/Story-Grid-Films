@@ -10,7 +10,6 @@ const Films = ({ heading }) => {
         edges {
           node {
             alt
-            button
             name
             img {
               childImageSharp {
@@ -23,6 +22,7 @@ const Films = ({ heading }) => {
         }
       }
     }
+    
   `)
 
   function getFilms(data) {

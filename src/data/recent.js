@@ -3,7 +3,7 @@ export const recent = [
     videoLink: "https://vimeo.com/721221406",
     title: "Taravat & Mohsen",
     subtitle: "Tags: Vancouver Wedding Videographer",
-    description: "A Glamourous Fine Art Wedding at Fairmont Hotel in Vancouver.",
+    description: "A Glamourous Fine Art Wedding at Fairmont Hotel in Vancouver. This is definitely one for the books!",
   },
   {
     videoLink: "https://vimeo.com/520090964",
