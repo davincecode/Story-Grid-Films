@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const Films = ({ heading }) => {
+const Films = ({ heading, subheading }) => {
   const data = useStaticQuery(graphql`
     query FilmsQuery {
       allFilmsJson {
@@ -43,6 +43,7 @@ const Films = ({ heading }) => {
   return (
     <FeatureContainer>
       <FeatureHeading>{heading}</FeatureHeading>
+      <SubFeatureHeading>{subheading}</SubFeatureHeading>
       <FeatureWrapper>{getFilms(data)}</FeatureWrapper>
     </FeatureContainer>
   )
@@ -56,10 +57,19 @@ const FeatureContainer = styled.div`
 `
 const FeatureHeading = styled.div`
   font-family: Lora;
-  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
   text-align: center;
   letter-spacing: 2px;
-  margin-bottom: 2rem;
+  padding: 2rem 2rem 0 2rem;
+  color: #545454;
+`
+
+const SubFeatureHeading = styled.div`
+  font-family: Lora;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  text-align: center;
+  letter-spacing: 2px;
+  padding: 0 2rem 2rem 2rem;
   color: #545454;
 `
 const FeatureWrapper = styled.div`

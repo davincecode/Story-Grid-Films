@@ -1,145 +1,97 @@
 import React from "react"
-import styled from "styled-components"
-import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+import Navdark from "../components/Navdark"
+import StyledButton from "../components/Button"
+import { Link } from "gatsby"
+import ReactPlayer from 'react-player'
 
-const AboutColumn = ({ heading }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      allFile(
-        filter: {
-          ext: { regex: "/(jpg)|(png)(jpeg)/" }
-          name: { in: ["imageMe"] }
-        }
-      ) {
-        edges {
-          node {
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
+import styled from "styled-components"
+
+const AboutColumn = ({ heading }) => (
+  <Layout>
+    <Seo title="about | Edmonton Wedding Videographer" />
+    <Container>
+      <HeadingTitle>
+      {heading}
+      </HeadingTitle>
+      <InvestmentContainer>
+      <ReactPlayer
+              url="https://vimeo.com/526762913"
+          config={ {
+            vimeo: {
+              playerOptions: {
+                background: false,
+                autoplay: true,
+                controls: false,
+                loop: true,
               }
             }
-          }
-        }
-      }
-    }
-  `)
-
-  return (
-    <AboutColumnContainer>
-      <AboutHeading>{heading}</AboutHeading>
-      <ContentWrapper>
-        <LeftColumn>
-          {data.allFile.edges.map((image, key) => (
-            <Images key={key} fluid={image.node.childImageSharp.fluid} />
-          ))}
-        </LeftColumn>
-        <RightColumn>
-          <h3>Thanks for being here!</h3>
-          <p>
-            I'm Vince, a Fine-Art Wedding Photographer and Videographer based in
-            Edmonton, Alberta. Also available worldwide where my camera might
-            take me. I've been documenting weddings since 2013 and have been
-            fortunate enough to be part of the beautiful weddings in Edmonton,
-            as well as destination weddings. I hope you take some time and learn
-            more about how I can be part of your wedding day. My work has been
-            seen in wedding publications; such as Wedding Sparrow, Dear Bride,
-            The Knot, Wedding Wire, and much more. Please take a look around the
-            website, and I hope we connect soon!
-          </p>
-        </RightColumn>
-      </ContentWrapper>
-    </AboutColumnContainer>
-  )
-}
+          } }
+        />
+        <p>
+        Our style can best be described as “cinematic storytelling”. We produce films that you want to watch over and over again, not films that you only watch once. We don't just capture you wedding day as it happens and put it to music, but we really get to know who you are as a couple, what makes you unique and tell your story in your film.
+        </p>
+        <p>
+        Our storytelling begins with getting ready, and ends whenever you are ready to let me go. I have found that 10 hours of coverage is more than enough for most couples, but I am always happy to stay longer.
+        </p>
+        <p>
+        We are care-free, laid back, fun, and love coffee! We understand that the wedding planning process is stressful and frustrating at times, so the being laid back and easygoing helps put our couples at ease. This should be a fun process, not a stressful one!
+        </p>
+      </InvestmentContainer>
+      <Link to="/contact">
+        <StyledButton>Learn more</StyledButton>
+      </Link>
+    </Container>
+  </Layout>
+)
 
 export default AboutColumn
 
-const AboutColumnContainer = styled.div`
-  background: #f9f6f2;
-  color: #000;
-  padding: 2rem calc((100vw - 1300px) / 2);
-`
-
-const AboutHeading = styled.div`
-  font-size: clamp(1.2rem, 1.8vw, 3rem);
-  text-align: center;
-  letter-spacing: 2px;
-  padding: 2rem;
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: #545454;
 `
 
-const ContentWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  @media screen and (max-width: 768px) {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-`
-
-const RightColumn = styled.div`
+const InvestmentContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  h3 {
-    font-family: "FontsFree-Net-RareBirdSpecimenII";
-    font-size: clamp(3rem, 1.8vw, 3rem);
-    font-weight: 100;
-    color: #545454;
-    margin-bottom: 2rem;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-  }
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  max-width: 1000px;
 
   p {
-    color: #545454;
-    text-align: justify;
-    line-height: 2rem;
-    padding: 2rem;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    padding: 2rem 0;
   }
+`
+
+const HeadingTitle = styled.div`
+  font-size: 1.5rem;
+  font-weight: 100;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  padding: 2rem;
 
   @media screen and (min-width: 375px) and (max-width: 768px) {
-    h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+    h1 {
       font-family: "FontsFree-Net-RareBirdSpecimenII";
       font-size: clamp(3rem, 1.8vw, 3rem);
       font-weight: 100;
-      color: #545454;
       margin-bottom: 2rem;
-      align-items: center;
       justify-content: center;
-      align-self: center;
-    }
-
-    p {
-      color: #545454;
-      text-align: justify;
-      line-height: 2rem;
+      align-items: center;
     }
   }
-`
-
-const LeftColumn = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
-
-  @media screen and (max-width: 375px) {
-    display: none;
-  }
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-`
-
-const Images = styled(Img)`
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
 `

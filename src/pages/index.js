@@ -13,8 +13,14 @@ const IndexPage = () => (
     <Seo title="Edmonton Wedding Videographer" />
     <Header />
     <Hero />
-    <Intro heading="EDMONTON WEDDING VIDEOGRAPHER, ALSO AVAILABLE FOR DESTINATION WEDDINGS" />
-    <Films heading="FEATURED WEDDINGS" />
+    <Intro
+      heading="WEDDING FILMAKER"
+      subheading="Edmonton, Vancouver and Worldwide"
+    />
+    <Films
+      heading="Your wedding is one of the most beautiful days of your life."
+      subheading="Let's capture it in a way that is timeless, elegant, & intimate."
+    />
     <Experience />
     <Email />
   </Layout>

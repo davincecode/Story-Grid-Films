@@ -97,7 +97,7 @@ const HeroItems = styled.div`
 `
 
 const HeroH1 = styled.h1`
-  font-size: clamp(1rem, 4vw, 2rem);
+  font-size: clamp(1rem, 3vw, 1.5rem);
   font-family: "Lato", san-serif;
   margin-bottom: 0.5rem;
   letter-spacing: 20px;
@@ -107,7 +107,7 @@ const HeroH1 = styled.h1`
 `
 
 const HeroP = styled.p`
-  font-size: clamp(0.8rem, 1vw, 2rem);
+  font-size: clamp(0.8rem, 1vw, 1.5rem);
   font-family: "Lato", san-serif;
   margin-bottom: 2rem;
   font-weight: 100;

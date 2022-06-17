@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Intro = ({ heading }) => {
+const Intro = ({ heading, subheading }) => {
   const data = useStaticQuery(graphql`
     query {
       allFile(
@@ -26,8 +26,9 @@ const Intro = ({ heading }) => {
   `)
 
   return (
-    <AboutColumnContainer>
-      <AboutHeading>{heading}</AboutHeading>
+    <IntroColumnContainer>
+      <IntroHeading><h1>{heading}</h1></IntroHeading>
+      <SubHeading><h2>{subheading}</h2></SubHeading>
       <ContentWrapper>
         <LeftColumn>
           {data.allFile.edges.map((image, key) => (
@@ -49,24 +50,38 @@ const Intro = ({ heading }) => {
           </p>
         </RightColumn>
       </ContentWrapper>
-    </AboutColumnContainer>
+    </IntroColumnContainer>
   )
 }
 
 export default Intro
 
-const AboutColumnContainer = styled.div`
+const IntroColumnContainer = styled.div`
   background: #f9f6f2;
   color: #000;
   padding: 2rem calc((100vw - 1300px) / 2);
 `
 
-const AboutHeading = styled.div`
-  font-size: clamp(1.2rem, 1.8vw, 3rem);
+const IntroHeading = styled.div`
   text-align: center;
   letter-spacing: 2px;
-  padding: 2rem;
+  padding-top: 2rem;
   color: #545454;
+
+  h1 {
+    font-size: 2rem;
+  }
+`
+
+const SubHeading = styled.div`
+  text-align: center;
+  letter-spacing: 2px;
+  padding-bottom: 2rem;
+  color: #545454;
+  
+  h2 {
+    font-size: 1rem;
+  }
 `
 
 const ContentWrapper = styled.div`

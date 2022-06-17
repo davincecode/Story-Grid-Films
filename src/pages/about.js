@@ -8,7 +8,7 @@ export default function about() {
   return (
     <Layout>
       <Navdark />
-      <AboutColumn heading="EDMONTON WEDDING VIDEOGRAPHER, ALSO AVAILABLE FOR DESTINATION WEDDINGS" />
+      <AboutColumn heading="Your wedding, just like your love story, is truly one-of-a-kind." />
     </Layout>
   )
 }

@@ -14,35 +14,22 @@ const info = () => (
     <Navdark />
     <Container>
       <HeadingTitle>
-        Your wedding, just like your love story, is truly one-of-a-kind.
+      <h1>DO YOU REALLY NEED A WEDDING VIDEOGRAPHER?</h1>
       </HeadingTitle>
       <InvestmentContainer>
-      <ReactPlayer
-              url="https://vimeo.com/526762913"
-          config={ {
-            vimeo: {
-              playerOptions: {
-                background: false,
-                autoplay: true,
-                controls: false,
-                loop: true,
-              }
-            }
-          } }
-              controls={ false }
-        />
+      
         <p>
-        Our style can best be described as “cinematic storytelling”. We produce films that you want to watch over and over again, not films that you only watch once. We don't just capture you wedding day as it happens and put it to music, but we really get to know who you are as a couple, what makes you unique and tell your story in your film.
+        Most brides don't look back and wish they added a few more flowers to the bridal table or kept the open bar flowing for another hour. What many brides do sadly regret is not hiring a wedding videographer. If you are even entertaining the idea of investing in wedding videography, then you must have it. If you don't, you surely will live happily ever after, but with that nagging regret. You will wish you could re-live your best day ever by watching your gorgeous wedding video.
         </p>
+        <quote>
+        "SADLY OUR MEMORIES FADE OVER TIME AND PHOTOS AND VIDEO ARE A LOVELY WAY TO HOLD ONTO THE BEST OF TIMES." 
+        </quote>
         <p>
-        Our storytelling begins with getting ready, and ends whenever you are ready to let me go. I have found that 10 hours of coverage is more than enough for most couples, but I am always happy to stay longer.
-        </p>
-        <p>
-        We are care-free, laid back, fun, and love coffee! We understand that the wedding planning process is stressful and frustrating at times, so the being laid back and easygoing helps put our couples at ease. This should be a fun process, not a stressful one!
+        You will want to hear the sound of family laughing, the familiar tone of your best friend's voice and the vows you speak to each other as you become man and wife. Some married couples who have celebrated many anniversaries together didn't have a video option when they got married. If they had the opportunity to preserve grandparents speaking on video, it would now be precious to them. Don't lose the chance you have. Video is a way to evoke meaningful memories of a day that flies by in a beautiful blur. You will reminisce over the footage for years to come and it will bring back the feelings of heightened excitement, fierce love and intimate romance that you have in your heart right now. 
         </p>
       </InvestmentContainer>
       <Link to="/contact">
-        <StyledButton>Learn more</StyledButton>
+        <StyledButton>Get in touch</StyledButton>
       </Link>
     </Container>
   </Layout>
@@ -74,26 +61,15 @@ const InvestmentContainer = styled.div`
 `
 
 const HeadingTitle = styled.div`
-  font-size: 1.5rem;
-  font-weight: 100;
   justify-content: center;
   align-items: center;
   margin-top: 40px;
   padding: 2rem;
 
-  @media screen and (min-width: 375px) and (max-width: 768px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-
-    h1 {
-      font-family: "FontsFree-Net-RareBirdSpecimenII";
-      font-size: clamp(3rem, 1.8vw, 3rem);
-      font-weight: 100;
-      margin-bottom: 2rem;
-      justify-content: center;
-      align-items: center;
-    }
+  h1 {
+  font-size: 1.5rem;
+  font-weight: 100;
   }
+
+  
 `
