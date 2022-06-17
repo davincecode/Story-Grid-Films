@@ -4,7 +4,6 @@ import Seo from "../components/seo"
 import Navdark from "../components/Navdark"
 import StyledButton from "../components/Button"
 import { Link } from "gatsby"
-import ReactPlayer from 'react-player'
 
 import styled from "styled-components"
 
