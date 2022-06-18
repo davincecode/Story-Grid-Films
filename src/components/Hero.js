@@ -96,7 +96,7 @@ const HeroItems = styled.div`
   font-weight: 100;
 `
 
-const HeroH1 = styled.h1`
+const HeroH1 = styled.p`
   font-size: clamp(1rem, 3vw, 1.5rem);
   font-family: "Lato", san-serif;
   margin-bottom: 0.5rem;

@@ -1,72 +1,72 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { FaBars } from "react-icons/fa"
+import { GrMenu, GrClose } from 'react-icons/gr';
 import { menuData } from "../data/MenuData"
+import "../components/styles/global.css"
 
 const Header = () => {
+
+  const [toggleMenu, setToggleMenu] = useState(false)
+
+  const toggleNav = () => {
+    setToggleMenu(!toggleMenu)
+  }
+
+  const closeNav = () => {
+    setToggleMenu(false)
+  }
+
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+
+    const changeWidth = () => {
+      setScreenWidth(window.innerWidth);
+    }
+
+    window.addEventListener('resize', changeWidth)
+
+  }, [])
+
+
   return (
-    <Nav>
-      <Navlink to="/"></Navlink>
-      <Bars />
-      <NavMenu>
-        {menuData.map((item, index) => (
+    <>
+      <Nav onMouseLeave={ closeNav }>
+      
+      <span className="menu-icon" onClick={ toggleNav } onKeyDown={ closeNav } role ="button" tabIndex={0}>
+        { toggleMenu ? <GrClose className='close-btn'/> : <GrMenu className='open-btn'/> }
+      </span>
+      
+      <div className='menu-links'>
+        {(toggleMenu || screenWidth > 768) && (menuData.map((item, index) => (
           <Navlink to={item.link} key={index}>
             {item.title}
           </Navlink>
-        ))}
-      </NavMenu>
-      <Navlink to="/"></Navlink>
+        )))}
+      </div>
     </Nav>
+    </>
   )
 }
 
 export default Header
 
 const Nav = styled.nav`
-  background: transparent;
+  background: Transparent;
+  padding: 0.5rem;
   height: 80px;
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem calc((100vw-1300px) / 2);
   z-index: 100;
   position: relative;
 `
+
 const Navlink = styled(Link)`
-  color: #fff;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
+  color: #f9f6f2;
   text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
+  padding: 1.2rem;
   cursor: pointer;
-
-  &:hover {
-    color: #545454;
-    transition: 0.5s ease-out;
-  }
-`
-
-const Bars = styled(FaBars)`
-  display: none;
-  color: #fff;
-
-  @media screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 75%);
-    font-size: 1.8rem;
-    cursor: pointer;
-  }
-`
-const NavMenu = styled.div`
-  display: flex;
-  align-items: center;
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
 `

@@ -27,8 +27,8 @@ const Intro = ({ heading, subheading }) => {
 
   return (
     <IntroColumnContainer>
-      <IntroHeading><h1>{heading}</h1></IntroHeading>
-      <SubHeading><h2>{subheading}</h2></SubHeading>
+      <IntroHeading>{heading}</IntroHeading>
+      <SubHeading>{subheading}</SubHeading>
       <ContentWrapper>
         <LeftColumn>
           {data.allFile.edges.map((image, key) => (
@@ -38,7 +38,7 @@ const Intro = ({ heading, subheading }) => {
         <RightColumn>
           <h3>Thanks for being here!</h3>
           <p>
-            I'm Vince, a Fine-Art Wedding Photographer and Videographer based in
+            I'm Vince, a Fine-Art Wedding Photographer and Cinematographer based in
             Edmonton, Alberta. Also available worldwide where my camera might
             take me. I've been documenting weddings since 2013 and have been
             fortunate enough to be part of the beautiful weddings in Edmonton,
@@ -62,26 +62,22 @@ const IntroColumnContainer = styled.div`
   padding: 2rem calc((100vw - 1300px) / 2);
 `
 
-const IntroHeading = styled.div`
+const IntroHeading = styled.h1`
   text-align: center;
   letter-spacing: 2px;
-  padding-top: 2rem;
+  padding: 2rem 1rem 0 1rem;
   color: #545454;
-
-  h1 {
-    font-size: 2rem;
-  }
+  font-size: 1.5rem;
+  font-weight: 100;
 `
 
-const SubHeading = styled.div`
+const SubHeading = styled.h2`
   text-align: center;
   letter-spacing: 2px;
   padding-bottom: 2rem;
   color: #545454;
-  
-  h2 {
-    font-size: 1rem;
-  }
+  font-size: 1rem;
+  font-weight: 100;
 `
 
 const ContentWrapper = styled.div`

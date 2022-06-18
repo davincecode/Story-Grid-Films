@@ -1,7 +1,77 @@
-.darkFont {
-  color: #545454 !important;
-  background-color: #000;
-}
 body {
   background-color: #f9f6f2;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 1.5rem;
+  min-height: 80px;
+  font-size: 1.5rem;
+  filter: invert(1);
+}
+
+.close-btn-dark {
+  position: absolute;
+  top: 0;
+  right: 1.5rem;
+  color: #000;
+  min-height: 80px;
+  font-size: 1.5rem;
+}
+
+.open-btn {
+  position: absolute;
+  top: 0;
+  right: 1.5rem;
+  min-height: 80px;
+  font-size: 1.5rem;
+  filter: invert(1);
+}
+
+.open-btn-dark {
+  position: absolute;
+  top: 0;
+  right: 1.5rem;
+  color: #000;
+  min-height: 80px;
+  font-size: 1.5rem;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.menu-icon-dark {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .menu-icon-dark {
+    display: flex;
+  }
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .menu-links {
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  a:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+  }
 }

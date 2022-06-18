@@ -14,7 +14,7 @@ const IndexPage = () => (
     <Header />
     <Hero />
     <Intro
-      heading="WEDDING FILMAKER"
+      heading="WEDDING CINEMATOGRAPHER"
       subheading="Edmonton, Vancouver and Worldwide"
     />
     <Films
