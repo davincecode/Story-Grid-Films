@@ -1,5 +1,4 @@
 import React from "react"
-import Layout from "../components/layout"
 import Seo from "../components/seo"
 import StyledButton from "../components/Button"
 import { Link } from "gatsby"
@@ -7,7 +6,7 @@ import ReactPlayer from 'react-player'
 import styled from "styled-components"
 
 const AboutColumn = ({ heading }) => (
-  <Layout>
+  <>
     <Seo title="about | Edmonton Wedding Videographer" />
     <Container>
       <HeadingTitle>
@@ -41,7 +40,7 @@ const AboutColumn = ({ heading }) => (
         <StyledButton>Learn more</StyledButton>
       </Link>
     </Container>
-  </Layout>
+  </>
 )
 
 export default AboutColumn

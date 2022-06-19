@@ -57,6 +57,10 @@ const InvestmentContainer = styled.div`
     letter-spacing: 2px;
     padding: 2rem 0;
   }
+
+  quote {
+    letter-spacing: 5px;
+  }
 `
 
 const HeadingTitle = styled.div`

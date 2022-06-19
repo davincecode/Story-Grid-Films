@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 import Films from "../components/Films"
 import Hero from "../components/Hero"
 import Layout from "../components/layout"
