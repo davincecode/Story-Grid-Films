@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import styled from "styled-components"
-import Navdark from "../components/Navdark"
+import Header from "../components/Header"
 import ReactPlayer from 'react-player'
 import { recent } from "../data/recent"
 
@@ -10,7 +10,7 @@ import { recent } from "../data/recent"
 const portfolio = () => (
   <Layout>
     <Seo title="Edmonton Wedding Videographer" />
-    <Navdark />
+    <Header />
     <Container>
       <h1>FEATURE FILMS</h1>
       { recent.map((item, index) => (

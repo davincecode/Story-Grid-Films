@@ -65,7 +65,7 @@ const Navlink = styled(Link)`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: #f9f6f2;
+  color: #545454;
   text-decoration: none;
   padding: 1.2rem;
   cursor: pointer;

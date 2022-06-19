@@ -1,13 +1,13 @@
 import React from "react"
 import Layout from "../components/layout"
-import Navdark from "../components/Navdark"
+import Header from "../components/Header"
 import Seo from "../components/seo"
 import styled from "styled-components"
 
 const contact = () => (
   <Layout>
     <Seo title="contact | Edmonton Wedding Videographer" />
-    <Navdark />
+    <Header />
     <Heading>
       <h1>I would love to hear from you!</h1>
     </Heading>

@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Navdark from "../components/Navdark"
+import Header from "../components/Header"
 import StyledButton from "../components/Button"
 import { Link } from "gatsby"
 
@@ -10,7 +10,7 @@ import styled from "styled-components"
 const info = () => (
   <Layout>
     <Seo title="info | Edmonton Wedding Videographer" />
-    <Navdark />
+    <Header />
     <Container>
       <HeadingTitle>
       <h1>DO YOU REALLY NEED A WEDDING VIDEOGRAPHER?</h1>
