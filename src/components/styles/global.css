@@ -8,7 +8,6 @@ body {
   right: 1.5rem;
   min-height: 80px;
   font-size: 1.5rem;
-  filter: invert(1);
 }
 
 .open-btn {
@@ -17,7 +16,6 @@ body {
   right: 1.5rem;
   min-height: 80px;
   font-size: 1.5rem;
-  filter: invert(1);
 }
 
 .menu-icon {
@@ -39,7 +37,7 @@ body {
   align-items: center;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .menu-links {
     color: #f9f6f2;
     flex-direction: column;
@@ -51,4 +49,4 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
   }
-}
+} */

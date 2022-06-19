@@ -27,7 +27,7 @@ const AboutColumn = ({ heading }) => (
           } }
         />
         <p>
-        Our style can best be described as “Cinematic storytelling”. We produce films that you want to watch over and over again, not films that you only watch once. We don't just capture you wedding day as it happens and put it to music, but we really get to know who you are as a couple, what makes you unique and tell your story in your film.
+        Our style can best be described as “Cinematic Storytelling”. We produce films that you want to watch over and over again, not films that you only watch once. We don't just capture you wedding day as it happens and put it to music, but we really get to know who you are as a couple, what makes you unique and tell your story in your film.
         </p>
         <p>
         Our storytelling begins with getting ready, and ends whenever you are ready to let me go. I have found that 10 hours of coverage is more than enough for most couples, but I am always happy to stay longer.
