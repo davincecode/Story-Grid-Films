@@ -33,15 +33,15 @@ const Navdark = () => {
     <>
       <Nav onMouseLeave={ closeNav }>
       
-        <span className="menu-icon-dark" onClick={ toggleNav } onKeyDown={ closeNav } role ="button" tabIndex={0}>
+      <span className="menu-icon-dark" onClick={ toggleNav } onKeyDown={ closeNav } role ="button" tabIndex={0}>
         { toggleMenu ? <GrClose className='close-btn-dark'/> : <GrMenu className='open-btn-dark'/> }
       </span>
       
-      <div className={toggleMenu ? 'nav-menu__open' : 'nav-menu__close'}>
+      <div className='menu-links-dark'>
         {(toggleMenu || screenWidth > 768) && (menuData.map((item, index) => (
-          <Navlink to={item.link} key={index}>
+          <NavlinkDark to={item.link} key={index}>
             {item.title}
-          </Navlink>
+          </NavlinkDark>
         )))}
       </div>
     </Nav>
@@ -53,28 +53,20 @@ export default Navdark
 
 const Nav = styled.nav`
   background: Transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem calc((100vw-1300px) / 2);
+  padding: 0.5rem;
   height: 80px;
   z-index: 100;
   position: relative;
 `
 
-const Navlink = styled(Link)`
+const NavlinkDark = styled(Link)`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   color: #545454;
   text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
+  padding: 1.2rem;
   cursor: pointer;
-
-  &:hover {
-    color: #545454;
-    transition: 0.5s ease-out;
-  }
-
-  @media (max-width: 300px) {
-    display: flex;
-  }
 `
+
