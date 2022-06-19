@@ -4,7 +4,6 @@ import Seo from "../components/seo"
 import StyledButton from "../components/Button"
 import { Link } from "gatsby"
 import ReactPlayer from 'react-player'
-
 import styled from "styled-components"
 
 const AboutColumn = ({ heading }) => (
@@ -50,6 +49,7 @@ export default AboutColumn
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   color: #545454;
 `
@@ -59,14 +59,17 @@ const InvestmentContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  margin-bottom: 1rem;
-  max-width: 1000px;
+  margin-bottom: 5rem;
+  max-width: 70%;
 
   p {
     font-size: 1rem;
     letter-spacing: 2px;
-    padding: 2rem 0;
+    padding: 1.2rem 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    max-width: 90%
   }
 `
 
