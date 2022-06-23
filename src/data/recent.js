@@ -24,16 +24,28 @@ export const recent = [
     description: "A beautiful Fine Art Wedding at The Crossing at Ghost River in Cochrane, Alberta. Such an honour to document Jenner and Grace's wedding in Cochrane.",
   },
   {
-    videoLink: "https://youtu.be/uwPMw5fI_Jk",
-    title: "Geof & Kelly",
-    subtitle: "Tags: Edmonton Wedding Videographer",
-    description: "A beautiful Fall Wedding in Edmonton, Alberta. Such an honour to document Geoff and Kelly's fall season wedding in Edmonton.",
+    videoLink: "https://vimeo.com/394259502",
+    title: "Ben and Sarah",
+    subtitle: "Tags: Banff Wedding Videographer",
+    description: "A beautiful Fall Wedding in Canmore, Alberta.",
+  },
+  {
+    videoLink: "https://vimeo.com/464278682",
+    title: "Braden and Vanessa",
+    subtitle: "Tags: St. Albert Wedding Videographer",
+    description: "A Romantic Fall Wedding in St. Albert, Alberta.",
   },
   {
     videoLink: "https://youtu.be/MDaUpE6TOmw",
     title: "Dakota and Lindsey",
     subtitle: "Tags: Edmonton Wedding Videography",
     description: "A beautiful Laid-Back wedding in Edmonton. Such an honour to document Dakota and Lindesy's wedding in Edmonton.",
+  },
+  {
+    videoLink: "https://vimeo.com/394349751",
+    title: "Chrishia at 18",
+    subtitle: "Tags: Edmonton Wedding Videography",
+    description: "A pre-debut creative cinematography for her 18th birthday.",
   },
   {
     videoLink: "https://youtu.be/41oTD44h5Ss",

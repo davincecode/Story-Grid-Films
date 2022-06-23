@@ -18,8 +18,12 @@ const portfolio = () => (
           <VideoContainer>
             <ReactPlayer
               url={ item.videoLink }
-              config={ { vimeo: { playerOptions: { background: false } } } }
+              config={ {
+                vimeo: { playerOptions: { background: false } },
+                youtube: { playerVars: { background: false, width: "700px" } }
+              } }
               controls={ false }
+              className="react-player"
               />
             <h2>{ item.title }</h2>
             <small>{ item.subtitle }</small>
@@ -54,8 +58,9 @@ const VideoContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 2rem;
-  width: 700px;
+  max-width: 840px;
 
   h2 {
     font-family: Lora;
@@ -69,6 +74,7 @@ const VideoContainer = styled.div`
   p {
     width: 100%;
     display: flex;
+    justify-content: center;
     text-align: center;
     line-height: 1.5rem;
   }

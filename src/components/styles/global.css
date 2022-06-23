@@ -37,16 +37,8 @@ body {
   align-items: center;
 }
 
-/* @media (max-width: 768px) {
-  .menu-links {
-    color: #f9f6f2;
-    flex-direction: column;
-    background-color: rgba(255,255,255,0.1);
-  }
-
-  a:hover {
-    color: #f9f6f2;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-  }
-} */
+.react-player {
+  display: flex;
+  width: 840px !important;
+  height: 357px !important;
+}
