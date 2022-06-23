@@ -12,7 +12,7 @@ export const recent = [
     description: "A beautiful Fall Wedding in Edmonton, Alberta. Such an honour to document Geoff and Kelly's fall season wedding in Edmonton.",
   },
   {
-    videoLink: "https://youtu.be/A-aayI-__tE",
+    videoLink: "https://vimeo.com/723229260",
     title: "Taylor & Viktoriya",
     subtitle: "Tags: Vancouver Wedding Videographer",
     description: "A beautiful Fine Art Wedding at Hycroft Manor in Vancouver. Such an honour to document Taylor & Viktoriya's wedding in Vancouver.",
